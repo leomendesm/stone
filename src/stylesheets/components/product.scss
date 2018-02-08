@@ -1,15 +1,23 @@
+@import '../common.scss';
+
 .product{
   display: flex;
   flex-direction: column;
-  width: 27%;
-  padding: 20px;
+  width: 100%;
   // border: 1px solid black;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   align-items: center;
+  @include large {
+    width: 27%;
+    padding: 20px;
+  } 
 }
 .product img{
-  width: 5em;
+  width: 7em;
   margin-left: 5px;
+  @include large {
+    width: 5em;
+  } 
 }
 .product img{
   text-align: center;
@@ -20,5 +28,5 @@
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center;  
+  align-items: center;
 }

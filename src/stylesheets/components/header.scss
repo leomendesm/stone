@@ -18,8 +18,9 @@
 .title{
   color: #000;
   font-family: $raleway;
-  font-size: 44px;
+  font-size: 36px;
   @include large {
+    font-size: 44px;
     margin-left: auto;
   }
 }

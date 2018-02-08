@@ -16,13 +16,13 @@ class Showcase extends Component {
   }
   render() {
     return (
-      <div className={styles.showcase}> 
-        <Product img={this.state.books.image} title={this.state.books.title} price={this.state.books.price} description={this.state.books.description} />
-        <Product img={this.state.books.image} title={this.state.books.title} price={this.state.books.price} description={this.state.books.description} />
-        <Product img={this.state.books.image} title={this.state.books.title} price={this.state.books.price} description={this.state.books.description} />
-        <Product img={this.state.books.image} title={this.state.books.title} price={this.state.books.price} description={this.state.books.description} />
-        <Product img={this.state.books.image} title={this.state.books.title} price={this.state.books.price} description={this.state.books.description} />
-        <Product img={this.state.books.image} title={this.state.books.title} price={this.state.books.price} description={this.state.books.description} />
+      <div>
+        <h2 className={styles.section}>{this.props.sectionName}</h2>
+        <div className={styles.showcase}>
+          <Product img={this.state.books.image} title={this.state.books.title} price={this.state.books.price} description={this.state.books.description} />
+          <Product img={this.state.books.image} title={this.state.books.title} price={this.state.books.price} description={this.state.books.description} />
+          <Product img={this.state.books.image} title={this.state.books.title} price={this.state.books.price} description={this.state.books.description} />
+         </div>
       </div>
     )
   }

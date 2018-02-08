@@ -7,7 +7,8 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Showcase />
+        <Showcase sectionName="Últimos lançamentos" />
+        <Showcase sectionName="Best Sellers 2018" />
       </div>
     );
   }

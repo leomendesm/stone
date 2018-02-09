@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from '../stylesheets/components/product.scss'
-import Button from './button'
+import styles from './product.scss'
+import { Button } from '../index'
 import PropTypes from 'prop-types'
 
 const Product = ({img, title, description, price}) => (

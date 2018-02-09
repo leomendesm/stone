@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Product } from '../components'
-import styles from '../stylesheets/containers/showcase.scss'
+import { Product } from '../../components'
+import styles from './showcase.scss'
 import PropTypes from 'prop-types'
 
 class Showcase extends Component {

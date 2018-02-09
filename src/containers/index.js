@@ -1,4 +1,4 @@
-import Cart from './cart'
-import Showcase from './showcase'
+import Cart from './cart/cart'
+import Showcase from './showcase/showcase'
 
 export {Cart, Showcase}

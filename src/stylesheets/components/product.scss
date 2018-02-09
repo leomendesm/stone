@@ -2,7 +2,7 @@
 
 .product{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   margin-bottom: 30px;
   align-items: center;
@@ -14,7 +14,7 @@
   width: 7em;
   margin-left: 5px;
   @include large {
-    width: 5em;
+    width: 8em;
   } 
 }
 .product img{
@@ -23,6 +23,7 @@
 .product p{
   font-family: $lato;
   text-align: center;
+  padding-left: 10px;
 }
 .content {
   display: flex;

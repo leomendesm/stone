@@ -9,7 +9,7 @@ class Showcase extends Component {
     this.state = { 
       books: {
         title: "Rápido e Devagar - Duas Formas de Pensar",
-        description: "O vencedor do Nobel de Economia Daniel Kahneman nos mostra as formas que controlam a nossa mente em Rápido e devagar, as duas formas de pensar: o pensamento rápido, intuitivo e emocional e o devagar, lógico e ponderado. Daniel nos mostra a capacidade do pensamento rápido, sua influência persuasiva em nossas decisões e até onde podemos ou não confiar nele. O entendimento do funcionamento dessas duas formas de pensar pode ajudar em nossas decisões pessoais e profissionais.",
+        description: "Mostra a capacidade do pensamento rápido, sua influência persuasiva em nossas decisões.",
         price: 55.1,
         image: "https://images.livrariasaraiva.com.br/imagemnet/imagem.aspx/?pro_id=4074748&qld=90&l=430&a=-1"
       }

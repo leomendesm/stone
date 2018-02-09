@@ -8,6 +8,7 @@ const Product = ({img, title, description, price}) => (
     <div><img alt={title} src={img} /></div>
     <div className={styles.content}>
       <p>{title}</p>
+      <p>{description}</p>
       <p>R${price}</p>
       <Button text='Adicionar ao Carrinho' showCart={true} />
     </div>

@@ -4,7 +4,7 @@ import styles from '../stylesheets/components/button.scss'
 import PropTypes from 'prop-types'
 
 const Button = ({ text, clickHandler, showCart }) => (
-<div className={styles.button} onClick={clickHandler}>{showCart && <MdAddShoppingCart />}{text}</div>
+<div className={styles.button} onClick={clickHandler}>{showCart && <MdAddShoppingCart className={styles.icon} />}{text}</div>
 )
 
 Button.PropTypes = {

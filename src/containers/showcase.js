@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Product } from '../components'
 import styles from '../stylesheets/containers/showcase.scss'
+import PropTypes from 'prop-types'
 
 class Showcase extends Component {
   constructor(props) {
@@ -26,6 +27,10 @@ class Showcase extends Component {
       </div>
     )
   }
+}
+
+Product.PropTypes = {
+  sectionName: PropTypes.string.isRequired
 }
 
 export default Showcase

@@ -9,7 +9,7 @@ class Showcase extends Component {
     this.state = { 
       books: {
         title: "Rápido e Devagar - Duas Formas de Pensar",
-        description: "Mostra a capacidade do pensamento rápido, sua influência persuasiva em nossas decisões.",
+        description: "Mostra a capacidade do pensamento rápido e sua influência persuasiva em nossas decisões.",
         price: 55.1,
         image: "https://images.livrariasaraiva.com.br/imagemnet/imagem.aspx/?pro_id=4074748&qld=90&l=430&a=-1"
       }

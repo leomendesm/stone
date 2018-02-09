@@ -10,23 +10,23 @@ const Product = ({img, title, description, price}) => (
       <p>{title}</p>
       <p>{description}</p>
       <p>R${price}</p>
-      <Button text='Adicionar ao Carrinho' showCart={true} />
+      <Button text='Adicionar ao Carrinho' showCart={true} clickHandler={() => {}}/>
     </div>
   </div>
 )
 
-Product.PropTypes = {
+Product.propTypes = {
   img: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired
+  price: PropTypes.number.isRequired
 }
 
 Product.defaultProps = {
   img: '',
   title: '',
   description: '',
-  price: ''
+  price: 0
 }
 
 export default Product

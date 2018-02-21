@@ -5,16 +5,9 @@ import {
   DECREMENT_QUANTITY_PRODUCT_ON_CART 
 } from './actions'
 
-export const addToCart = id => ({
+export const addToCart = item => ({
   type: ADD_PRODUCT_TO_CART,
-  payload: {
-    book: {
-      photo,
-      title,
-      description,
-      price
-    }
-  }
+  payload: item
 })
 
 export const removeFromCart = index => ({

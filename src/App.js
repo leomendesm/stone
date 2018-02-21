@@ -8,7 +8,11 @@ import {
   import { composeWithDevTools } from 'redux-devtools-extension'
 import { Showcase, Cart } from './containers'
 import { Header } from './components'
-  
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom'
+
 const store = createStore(
   reducers,
   composeWithDevTools(
@@ -20,12 +24,13 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div>
-          <Header />
-          {/* <Showcase sectionName="Últimos lançamentos" />*/}
-          <Showcase sectionName="Best Sellers 2018" /> 
-          <Cart />
-        </div>
+        <Router>
+          <div>
+            <Header />
+            <Route exact path={'/'} component={Showcase} />
+            <Route exact path={'/cart'} component={Cart} />
+          </div>
+        </Router>
       </Provider>
     );
   }

@@ -1,40 +1,57 @@
 import React, { Component } from 'react'
-import { Product } from '../../components'
-import styles from './cart.scss'
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 
-import { FetchBookList } from '../../redux-flow/reducers/showcase/action-creators'
+import styles from './cart.scss'
+
+import { CartItem } from '../../components'
+import { 
+  removeFromCart,
+  incrementQuantityOnCart,
+  decrementQuantityOnCart } from '../../redux-flow/reducers/cart/action-creators'
 
 class Cart extends Component {
-
-  render() {
+  render(){
+    let totalPrice = 0
+    this.props.cart.forEach(m => {totalPrice += m.saleInfo.retailPrice.amount*m.quantity})
     return (
       <div>
-        <div className={styles.showcase}>
-          {this.props.cart.map(m =>
-            <Product 
-              img={m.volumeInfo.imageLinks.thumbnail}
+        <div className={styles.container}>
+          {this.props.cart.map((m, index) =>
+            <CartItem
+              key={index}
               title={m.volumeInfo.title}
               price={m.saleInfo.retailPrice.amount}
               description={m.searchInfo.textSnippet}
+              quantity={m.quantity}
+              decrementHandler={this.props.decrementQuantityOnCart(index)}
+              incrementHandler={this.props.incrementQuantityOnCart(index)}
+              removeHandler={this.props.removeFromCart(index)}
             />
           )}
-         </div>
+          <div>
+            <h2>Preço total: {totalPrice.toFixed(2)}
+          </div>
+        </div> 
       </div>
     )
   }
 }
-
-
 
 const mapStateToProps = state => ({
   cart: state.cart
 })
 
 const mapDispatchToProps = dispatch => ({
-  FetchBookList: () => {
-    dispatch(FetchBookList(dispatch))
+  removeFromCart: index => () => {
+    dispatch(removeFromCart(index))
+  },
+  incrementQuantityOnCart: index => () => {
+    dispatch(incrementQuantityOnCart(index))
+  },
+  decrementQuantityOnCart: index => () => {
+    dispatch(decrementQuantityOnCart(index))
   }
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cart)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Cart))

@@ -1,0 +1,39 @@
+@import '../../stylesheets/common.scss';
+$font-size: 14px;
+$line-height: 1.4;
+$lines-to-show: 2;
+.item{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+.item p{
+  font-family: $lato;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quantity{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.description{
+  max-width: 400px;
+  height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+  font-size: $font-size;
+  line-height: $line-height;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

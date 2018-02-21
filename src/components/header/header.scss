@@ -16,6 +16,7 @@
 }
 
 .title{
+  text-decoration: none;
   color: #000;
   font-family: $raleway;
   font-size: 36px;
@@ -28,6 +29,7 @@
 .cart{
   width: 36px;
   height: 36px;
+  fill: #000;
   @include large {
     margin-left: auto;
   }

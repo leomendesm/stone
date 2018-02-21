@@ -5,12 +5,15 @@ import reducers from './redux-flow/reducers'
 import {
   createStore,
   applyMiddleware } from 'redux'
-import { Showcase } from './containers'
+  import { composeWithDevTools } from 'redux-devtools-extension'
+import { Showcase, Cart } from './containers'
 import { Header } from './components'
   
 const store = createStore(
   reducers,
-  applyMiddleware(thunk)
+  composeWithDevTools(
+    applyMiddleware(thunk)
+  )
 )
 
 class App extends Component {
@@ -19,8 +22,9 @@ class App extends Component {
       <Provider store={store}>
         <div>
           <Header />
-          <Showcase sectionName="Últimos lançamentos" />
-          <Showcase sectionName="Best Sellers 2018" />
+          {/* <Showcase sectionName="Últimos lançamentos" />*/}
+          <Showcase sectionName="Best Sellers 2018" /> 
+          <Cart />
         </div>
       </Provider>
     );

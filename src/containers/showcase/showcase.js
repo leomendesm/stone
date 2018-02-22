@@ -16,7 +16,7 @@ class Showcase extends Component {
   render() {
     return (
       <div>
-        <h2 className={styles.section}>{this.props.sectionName}</h2>
+        <h1 className={styles.section}>{this.props.sectionName}</h1>
         <div className={styles.showcase}>
           {this.props.showcase.data.map((m, index) =>
             <Product
@@ -34,8 +34,12 @@ class Showcase extends Component {
   }
 }
 
-Product.PropTypes = {
-  sectionName: PropTypes.string.isRequired
+Showcase.PropTypes = {
+  sectionName: PropTypes.string
+}
+
+Showcase.defaultProps = {
+  sectionName: 'Livros mais vendidos'
 }
 
 const mapStateToProps = state => ({

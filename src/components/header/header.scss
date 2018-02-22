@@ -3,14 +3,14 @@
 .header{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   border-bottom: 1px solid #000;
   align-items: center;
-  padding: 10px 0px;
+  padding: 10px;
   @include large {
     width: 85%;
     margin-left: 7.5%;
-    padding: 20px;
+    padding: 20px 0;
     justify-content: center;
   }
 }

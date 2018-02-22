@@ -12,6 +12,7 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
+import Notifications from 'react-notify-toast';
 
 const store = createStore(
   reducers,
@@ -29,6 +30,7 @@ class App extends Component {
             <Header />
             <Route exact path={'/'} component={Showcase} />
             <Route exact path={'/cart'} component={Cart} />
+            <Notifications />
           </div>
         </Router>
       </Provider>

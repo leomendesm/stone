@@ -5,9 +5,23 @@
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
+  padding: 10px;
   @include large {
     width: 85%;
     margin-left: 7.5%;
+    padding: 20px 0;
+  }
+  .title{
+    text-align: center;
+    font-family: $raleway;
+  }
+  .price{
+    text-align: right;
+    font-family: $lato;
+  }
+  .empty{
+    font-family: $raleway;
+    text-align: center;
   }
 }
 .section{

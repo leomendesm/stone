@@ -5,7 +5,7 @@ import Product from './product'
 describe('<Product />', () => {
   it('should have 3 div tag when mount', () => {
     const btn = shallow(<Product />)
-    expect(btn.find('div')).toHaveLength(3)
+    expect(btn.find('div')).toHaveLength(4)
   })
   it('should have a Button tag when mount', () => {
     const btn = shallow(<Product />)

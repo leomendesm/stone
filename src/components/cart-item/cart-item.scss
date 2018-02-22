@@ -21,11 +21,21 @@ $lines-to-show: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-basis: 50%;
+  @include large {
+    flex-basis: 60%;
+  }
 }
 .quantity{
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 25%;
+  flex-basis: 12.5%;
+  justify-content: center;
+  @include large {
+    flex-basis: 10%;
+  }
 }
 .description{
   max-width: 400px;

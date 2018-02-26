@@ -39,7 +39,27 @@ Showcase.PropTypes = {
 }
 
 Showcase.defaultProps = {
-  sectionName: 'Livros mais vendidos'
+  sectionName: 'Livros mais vendidos',
+  FetchBookList: () => {},
+  showcase: {
+    data: [{
+      "volumeInfo": {
+        "title": "UX Design Process",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=v-8ztNSkac8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=v-8ztNSkac8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+        }
+      },
+      "saleInfo": {
+          "retailPrice": {
+              "amount": 11.13
+          }
+      },
+      "searchInfo": {
+        "textSnippet": "In this book, you’ll learn how lean UX has made the whole discipline more approachable and attractive to startups, and you’ll see that UX issues aren’t just a quick fix, but should also address big-picture issues."
+      }
+    }]
+  }
 }
 
 const mapStateToProps = state => ({
@@ -56,3 +76,5 @@ const mapDispatchToProps = dispatch => ({
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Showcase))
+
+export {Showcase as ShowcaseTest}

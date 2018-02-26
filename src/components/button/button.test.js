@@ -20,4 +20,8 @@ describe('<Button />', () => {
     const btn = shallow(<Button text={""} clickHandler={()=>{}} showCart={true} />)
     expect(btn.find('MdAddShoppingCart')).toHaveLength(1)
   })
+  it('should add a new class to button if onCart prop is true', () => {
+    const btn = shallow(<Button text={""} clickHandler={()=>{}} onCart={true} />)
+    expect(btn.find('div').props().className).toBe(" ")
+  })
 })

@@ -34,13 +34,17 @@ class Showcase extends Component {
   }
 }
 
-Showcase.PropTypes = {
-  sectionName: PropTypes.string
+Showcase.propTypes = {
+  sectionName: PropTypes.string,
+  FetchBookList: PropTypes.func,
+  addToCart: PropTypes.func,
+  showcase: PropTypes.object
 }
 
 Showcase.defaultProps = {
   sectionName: 'Livros mais vendidos',
   FetchBookList: () => {},
+  addToCart: () => {},
   showcase: {
     data: [{
       "volumeInfo": {

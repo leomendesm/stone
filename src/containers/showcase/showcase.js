@@ -67,12 +67,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  FetchBookList: () => {
-    dispatch(FetchBookList(dispatch))
-  },
-  addToCart: item => () => {
-    dispatch(addToCart(item))
-  }
+  FetchBookList: () => dispatch(FetchBookList(dispatch)),
+  addToCart: item => () => dispatch(addToCart(item))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Showcase))

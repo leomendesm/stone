@@ -57,13 +57,15 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "test:coverage": "node scripts/test.js --env=jsdom --coverage"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}",
       "!src/index.js",
+      "!src/App.js",
       "!src/registerServiceWorker.js",
       "!src/containers/index.js",
       "!src/components/index.js"

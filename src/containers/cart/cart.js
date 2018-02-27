@@ -47,15 +47,9 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  removeFromCart: index => () => {
-    dispatch(removeFromCart(index))
-  },
-  incrementQuantityOnCart: index => () => {
-    dispatch(incrementQuantityOnCart(index))
-  },
-  decrementQuantityOnCart: index => () => {
-    dispatch(decrementQuantityOnCart(index))
-  }
+  removeFromCart: index => () => dispatch(removeFromCart(index)),
+  incrementQuantityOnCart: index => () => dispatch(incrementQuantityOnCart(index)),
+  decrementQuantityOnCart: index => () => dispatch(decrementQuantityOnCart(index))
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Cart))

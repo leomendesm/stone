@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styles from './cart-item.scss'
 import { Button } from '../index'
 import PropTypes from 'prop-types'
-import { notify } from 'react-notify-toast'
 
 const CartItem = ({title, price, quantity, decrementHandler, incrementHandler, removeHandler}) => (
   <div className={styles.item}>

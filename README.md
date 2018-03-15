@@ -25,5 +25,5 @@ Executa todos os testes no modo "watch"(observa cada mudança) interativo para q
 ### `yarn test:coverage`
 Exibe uma tabela contendo a cobertura de testes pra todos os arquivos do projeto.
 
-##Trabalhos futuros / observações
+## Trabalhos futuros / observações
 - Adicionar testes de integração
